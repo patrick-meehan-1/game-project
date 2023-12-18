@@ -8,11 +8,11 @@
 
 
 
-<ul> 
-    {% for player in player_list %} 
-        <li>{{ player.name }}</li> 
-    {% endfor %} 
-</ul> 
+<ul>
+    {% for player in players %}
+        <li>{{ player.username }}, {{ player.country }}</li>
+    {% endfor %}
+</ul>
 
 
 
@@ -21,7 +21,6 @@
 
 
 <p>{{season.description}}</p>
-<p>{{games.season.players.username}}</p>
 <img
  src="{{season.poster.url}}"
  alt="{{season.title}}">

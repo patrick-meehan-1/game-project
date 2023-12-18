@@ -17,8 +17,7 @@ class Game(models.Model):
 class Season(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    poster = models.ImageField(upload_to='season_posters/')
-    memory_wall = models.ImageField(upload_to='memory_walls/') 
+    poster = models.ImageField(upload_to='season_posters/', null=True)
     game = models.ForeignKey(
         Game,
         on_delete=models.CASCADE,

@@ -5,7 +5,7 @@ from .models import CustomUser, Profile
 # Create your views here.
 
 def home_page(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 class ProfilePageView(DetailView):
     model = Profile
