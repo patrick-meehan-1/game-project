@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Season 1{% endblock %}
+
+{% block content %}
+<h1>{{season.title}}</h1>
+
+
+
+
+
+<ul> 
+    {% for player in player_list %} 
+        <li>{{ player.name }}</li> 
+    {% endfor %} 
+</ul> 
+
+
+
+
+
+
+
+<p>{{season.description}}</p>
+<p>{{games.season.players.username}}</p>
+<img
+ src="{{season.poster.url}}"
+ alt="{{season.title}}">
+ <img
+ src="{{season.memory_wall.url}}"
+ alt="{{season.title}}">
+
+    
+
+{% endblock %}
