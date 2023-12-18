@@ -7,6 +7,7 @@ from django.urls import reverse
 class CustomUser(AbstractUser):
     picture = models.ImageField(upload_to='profile_picture/', blank=True)
     country = models.CharField(max_length=255, null=True, blank=True)
+    points = models.PositiveBigIntegerField(null=True, blank=True)
 
 class Profile(models.Model):
     player = models.OneToOneField(
