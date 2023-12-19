@@ -1,0 +1,33 @@
+html {
+    /* To make use of full height of page*/
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    background: rgb(200, 183, 142);
+    background: linear-gradient(180deg, rgba(200, 183, 142, 1) 0%, rgba(200, 183, 142, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background: rgb(122, 112, 87);
+    background: linear-gradient(180deg, rgba(200, 183, 142, 1) 0%, rgb(156, 142, 107) 80%);
+}
+
+.name,
+.name:hover {
+    color: rgb(228, 190, 88);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.title {
+    text-shadow: 5px 5px 10px #4f3321;
+    background: #000000;
+    background: linear-gradient(to top, #000000 0%, #8A480F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
