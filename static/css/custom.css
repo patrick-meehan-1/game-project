@@ -31,3 +31,14 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.card {
+    border: none;
+}
+
+.my-logo {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    /* Other styles here */
+}

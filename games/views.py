@@ -8,11 +8,11 @@ from django.contrib.auth import get_user_model
 
 # Create your views here.
 
-class GamePageView(DetailView):
-    User = get_user_model()
-    users = User.objects.all()
-    model = Game
-    template_name = 'game.html'
+def game_details(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+    seasons = game.seasons.all()
+
+    return render(request, 'game.html', {'game': game, 'seasons': seasons})
 
 class PlayerListView(ListView):
     model = CustomUser

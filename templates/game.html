@@ -1,14 +1,20 @@
-{% extends 'base.html' %}
-{% block title %}Game{% endblock %}
+{% extends 'base.html' %} 
+{% block title %}{{game.title}}{% endblock %}
 
 {% block content %}
-<h1>{{game.title}}</h1>
 
+<div class="bg-transparent card">
+  <img class="card-img-top" src="{{game.poster.url}}" alt="{{game.title}}" />
 
-<p>{{game.description}}</p>
-<p>{{game.num_seasons}}</p>
-<img
- src="{{game.poster.url}}"
- alt="{{game.title}}">
+  <div >
+    <h1>{{game.title}}</h1>
+    <p class="fs-5">{{game.description}}</p>
+    <p>Number of Seasons: {{game.num_seasons}}</p>
+    <h2>Seasons</h2>
+    {% for season in seasons %}
+        <a class="fw-bolder btn btn-warning">{{ season.title }}</a>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock %}
