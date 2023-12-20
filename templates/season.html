@@ -4,25 +4,22 @@
 {% block content %}
 
 <div class="bg-transparent card">
-    <img class="card-img-top" src="{{season.poster.url}}" alt="{{season.title}}" />
+    <img class="card-img-top " src="{{season.poster.url}}" alt="{{season.title}}" />
   
     <div >
       <h1>{{season.title}}</h1>
       <p class="fs-5">{{season.description}}</p>
       <h2>Players</h2>
-      <div class="container">
-        <div class="col-md-3 px-0">
-      {% for player in players %}
-        <a> <img class="img-fluid" src="{{player.picture.url}}" alt="{{player.username}}"></a>
-    {% endfor %}
+</div>
+
+<div class="container-fluid ">
+  <div class="row g-2">
+    {% for player in players %}
+    <div class="col-lg-2 col-md-1">
+          <a href="/profile/{{player.profile.id}}" alt='players profile'> <img class="img-thumbnail" src="{{player.picture_thumbnail.url}}" alt="{{player.username}}"></a>
     </div>
+          {% endfor %}
   </div>
 </div>
-</div>
-
-
-
-
-    
 
 {% endblock %}
