@@ -2,26 +2,26 @@
 {% block title %}Season 1{% endblock %}
 
 {% block content %}
-<h1>{{season.title}}</h1>
 
-
-
-
-
-<ul>
-    {% for player in players %}
-        <li>{{ player.username }}, {{ player.country }}</li>
+<div class="bg-transparent card">
+    <img class="card-img-top" src="{{season.poster.url}}" alt="{{season.title}}" />
+  
+    <div >
+      <h1>{{season.title}}</h1>
+      <p class="fs-5">{{season.description}}</p>
+      <h2>Players</h2>
+      <div class="container">
+        <div class="col-md-3 px-0">
+      {% for player in players %}
+        <a> <img class="img-fluid" src="{{player.picture.url}}" alt="{{player.username}}"></a>
     {% endfor %}
-</ul>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
-
-
-
-
-<p>{{season.description}}</p>
-<img class="img-thumbnail rounded float-start img-fluid" src="{{season.poster.url}}" alt="{{season.title}}">
 
     
 
