@@ -4,15 +4,28 @@
 
 {% block content %}
 
-<div class="container">
+{% comment %} <div class="bg-transparent card">
     <br>
-    
-    <img class="profile_img" src="{{user.picture.url}}" alt="{{profile.name}}">
+    <img class="card-img-top rounded mx-auto d-block" style="width: 18rem;" src="{{user.picture.url}}" alt="{{profile.name}}">
+  
+    <div >
+      <h1>{{user.username}}</h1>
+      <p class="fs-5">{{user.profile.bio}}</p>
+    </div>
+  </div> {% endcomment %}
 
+
+  <div class="container">
+    <br>
+    <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+    <div class="mid-width: 18rem;">
+    <img class="card-img-top" src="{{user.picture.url}}" alt="{{profile.name}}">
+    </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+    <div class="left-pad">
     <h1 class="my_prod_title">{{user.username}}</h1>
-    <p class="fs-6"><span class="fw-bold">Bio: </span>{{ user.profile.bio }}</p>
-    <p class="fs-6"><span class="fw-bold">Fun Fact: </span>{{ user.profile.fun_fact }}</p>
-    
-</div>
+    <p class="text-justify my_prod_text">{{user.profile.bio}}</p>
 
 {% endblock %}
