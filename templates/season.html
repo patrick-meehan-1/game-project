@@ -16,7 +16,7 @@
   <div class="row g-2">
     {% for player in players %}
     <div class="col-lg-2 col-md-1">
-          <a href="/profile/{{player.profile.id}}" alt='players profile'> <img class="img-thumbnail" src="{{player.picture_thumbnail.url}}" alt="{{player.username}}"></a>
+          <a href="/profile/{{player.id}}" alt='players profile'> <img class="img-thumbnail" src="{{player.picture_thumbnail.url}}" alt="{{player.username}}"></a>
     </div>
           {% endfor %}
   </div>

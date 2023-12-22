@@ -20,12 +20,12 @@
     <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
     <div class="mid-width: 18rem;">
-    <img class="card-img-top" src="{{user.picture.url}}" alt="{{profile.name}}">
+    <img class="card-img-top img-thumbnail" src="{{profile.player.picture.url}}" alt="{{profile.name}}">
     </div>
     </div>
     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
     <div class="left-pad">
-    <h1 class="my_prod_title">{{user.username}}</h1>
-    <p class="text-justify my_prod_text">{{user.profile.bio}}</p>
+    <h1 class="my_prod_title">{{profile.player.username}}</h1>
+    <p class="text-justify my_prod_text">{{profile.bio}}</p>
 
 {% endblock %}
