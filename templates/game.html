@@ -12,7 +12,7 @@
     <p>Number of Seasons: {{game.num_seasons}}</p>
     <h2>Seasons</h2>
     {% for season in seasons %}
-        <a class="fw-bolder btn btn-warning">{{ season.title }}</a>
+        <a href="/game/season/{{season.id}}" class="fw-bolder btn btn-warning">{{ season.title }}</a>
     {% endfor %}
   </div>
 </div>
