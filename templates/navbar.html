@@ -16,9 +16,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Games</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Game 1</a></li>
-                        <li><a class="dropdown-item" href="#">Game 2</a></li>
-                        <li><a class="dropdown-item" href="#">Game 3</a></li>
+                    {% for game in games %}
+                        <li>
+                            <a class="dropdown-item" href="/game/{{game.id}}">{{ game.title }}</a>
+                        </li>
+                    {% endfor %}
                     </ul>
                 </li>
             </ul>
