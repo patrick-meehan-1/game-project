@@ -4,15 +4,13 @@
 
 {% block content %}
 
-{% comment %} <div class="bg-transparent card">
-    <br>
-    <img class="card-img-top rounded mx-auto d-block" style="width: 18rem;" src="{{user.picture.url}}" alt="{{profile.name}}">
-  
-    <div >
-      <h1>{{user.username}}</h1>
-      <p class="fs-5">{{user.profile.bio}}</p>
-    </div>
-  </div> {% endcomment %}
+{% if profile %}
+<div class="row my_row_class">
+    <div class="mx-auto">
+        <p><a href='/'>HOME</a> | <a href='/game/leaderboard/'>Leaderboard</a> | {{profile.player.username}}</p>
+    </div> 
+</div>
+{% endif %}
 
 
   <div class="container">
