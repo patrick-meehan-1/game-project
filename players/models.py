@@ -14,7 +14,7 @@ class CustomUser(AbstractUser):
                                        format='PNG',
                                        options={'quality':100})
     country = models.CharField(max_length=255, null=True, blank=True)
-    points = models.PositiveBigIntegerField(null=True, blank=True)
+    points = models.PositiveBigIntegerField(default=0)
 
 class Profile(models.Model):
     player = models.OneToOneField(

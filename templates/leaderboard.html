@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+
+
+    
+
+        <h1>Leaderboard</h1>
+        <div class="row g-2">
+            {% for user in leaderboard_data %}
+          <div class="col-lg-2 col-md-1">
+            <a href="/profile/{{user.profile.id}}" alt='players profile'><img class="img-thumbnail" src="{{ user.picture_thumbnail.url }}" alt="{{ user.username}}"></a>
+            <p class="text-center"><span class=" fs-5 fw-bolder">{{ user.username }}</span> - Points: {{ user.points }}</p>
+        </div>
+            {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}

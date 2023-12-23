@@ -24,6 +24,6 @@ def season_players(request, season_id):
     players = season.players.all()
     return render(request, 'season.html', {'season': season, 'players': players})
 
-
-games = Game.objects.filter(id=True)
-context = {'games': games}
+def leaderboard(request):
+    leaderboard_data = CustomUser.objects.order_by('-points')
+    return render(request, 'leaderboard.html', {'leaderboard_data': leaderboard_data})
