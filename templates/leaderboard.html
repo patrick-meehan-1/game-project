@@ -2,25 +2,23 @@
 {% block title %}Leaderboard{% endblock %}
 
 {% block content %}
-
-
-{% if leaderboard_data %}
-<div class="row my_row_class">
-    <div class="mx-auto">
+  {% if ranked_data %}
+    <div class="row my_row_class">
+      <div class="mx-auto">
         <p><a href='/'>HOME</a> | Leaderboard</p>
-    </div> 
-</div>
-{% endif %}
-
-        <h1>Leaderboard</h1>
-        <div class="row g-2">
-            {% for user in leaderboard_data %}
-          <div class="col-lg-2 col-md-1">
-            <a href="/profile/{{user.profile.id}}" alt='players profile'><img class="img-thumbnail" src="{{ user.picture_thumbnail.url }}" alt="{{ user.username}}"></a>
-            <p class="text-center"><span class=" fs-5 fw-bolder">{{ user.username }}</span> - Points: {{ user.points }}</p>
-        </div>
-            {% endfor %}
-        </div>
       </div>
+    </div>
 
+    <h1 class="mt-3">Leaderboard</h1>
+    <div class="row g-2">
+      {% for data in ranked_data %}
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="/profile/{{ data.user.profile.id }}" alt='players profile'>
+            <img class="img-thumbnail" src="{{ data.user.picture_thumbnail.url }}" alt="{{ data.user.username }}">
+          </a>
+          <p class="text-center fs-5 fw-bolder mt-2">{{ data.rank }}. {{ data.user.username }} - {{ data.user.points }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endblock %}

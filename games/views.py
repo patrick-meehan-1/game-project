@@ -26,4 +26,5 @@ def season_players(request, season_id):
 
 def leaderboard(request):
     leaderboard_data = CustomUser.objects.order_by('-points')
-    return render(request, 'leaderboard.html', {'leaderboard_data': leaderboard_data})
+    ranked_data = [{"rank": rank + 1, "user": user} for rank, user in enumerate(leaderboard_data)]
+    return render(request, 'leaderboard.html', {'ranked_data': ranked_data})
