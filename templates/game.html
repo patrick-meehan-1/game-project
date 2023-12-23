@@ -3,6 +3,14 @@
 
 {% block content %}
 
+{% if game %}
+  <div class="row my_row_class">
+      <div class="mx-auto">
+          <p><a href='/'>HOME</a> | {{game.title}}</p>
+      </div> 
+  </div>
+  {% endif %}
+
 <div class="bg-transparent card">
   <img class="card-img-top" src="{{game.poster.url}}" alt="{{game.title}}" />
 
