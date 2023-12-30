@@ -60,3 +60,11 @@ nav {
     font-size: 12px;
     text-decoration: none;
 }
+
+
+/****IMAGE BORDERS****/
+
+.img-thumbnail {
+    background-color: #4f3321;
+    border: 1px solid #4f3321;
+}
